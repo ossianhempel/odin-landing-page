@@ -1,4 +1,58 @@
+@import 'https://meyerweb.com/eric/tools/css/reset/reset.css';
+
+:root {
+    --dark-background-clr: #1f2937;
+    --quote-background-clr: #e5e7eb;
+    --light-blue-clr: #3882F6;
+    --strong-white-text-clr: #f9faf8;
+    --weak-white-text-clr: #e5e7eb;
+    --black-clr: #1f2937;
+    --quote-text-clr: #1f2937;
+    --white-clr: white;
+
+    --fs-main-text: 48px;
+    --fs-secondary-text: 18px;
+    --fs-logo-text: 24px;
+    --fs-header-text: 36px;
+    --fs-quote-text: 36px;
+
+    --fw-main-text: bolder;
+    
+}
+
 /* SETUP */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+picture {
+    display: block;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: rgb(188, 186, 186);
+    color: var(--weak-white-text-clr);
+    padding: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
 
 
 /* SETTINGS */
@@ -17,6 +71,11 @@ section {
     border: 4px solid orange;
     padding: 10px;
 }
+
+/* body * {
+    border: 1px solid blue;
+    padding: 2px;
+  } */
 
 /* STRUCTURE */
 
@@ -45,155 +104,99 @@ header .inner-container {
 
 /* TYPOGRAPHY */
 
-/* COMPONENTS */
-button {
+.header {
+    font-size: var(--fs-header-text);
 
 }
 
+.main-text {
+    font-weight: var(--fw-main-text);
+    font-size: var(--fs-main-text);
+}
+
+.quote {
+    font-style: italic;
+    font-size: var(--fs-quote-text);
+}
+
+
+
+
+/* COMPONENTS */
+button {
+    display: inline-block;
+    color: var(--weak-white-text-clr);
+    background-color: var(--light-blue-clr);
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+
+
+
 card {
-    
+
 }
 
 /* MODULES */
+header .inner-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+hero {
+    display: flex;
+    flex-direction: column;
+    margin: auto 5rem;
+    gap: 10px;
+    /* .. */
+    
+}
+
+hero .text-content {
+    display: block;
+}
+
+hero .text-content p {
+    margin-top: 10px;
+}
+
+hero .text-content button {
+    margin-top: 10px;
+}
+
+hero picture {
+
+}
+
+@media (min-width: 700px){
+    hero {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+    }
+    hero :is(text-content, picture) {
+        /* flex-basis: 50%; text and image take up half space each    */
+      }
+}
 
 /* STYLING */
 
-
-
-.site {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    margin: 0%;   
-}
-
-#header, #footer {
-    background-color: #1f2937;
-}
-
-.hero-main {
-    font-size: 48px;
-    font-weight: bolder;
-    color: #f9faf8;
-    margin-bottom: 0;
-}
-
-.hero-secondary, a, .cta-text, #footer {
-    font-size: 18px;
-    color: #e5e7eb;
-    text-decoration: none;
-}
-
-.logo {
-    font-size: 24px;
-    color: #f9faf8;
-}
-
-button, .section-cta {
-    background-color: #3882f6;
-}
-
-button, .cta-logo {
-    color: #f9faf8;
-}
-
-.information-header {
-    font-size: 36px;
-    font-weight: bolder;
-    color: #1f2937;
-}
-
-em {
-    font-size: 36px;
-    font-style: italic;
-    color: #1f2937;
-}
-
-
-/* -------- colors and font styles -------- */
-
-#header { 
-    display: flex;
-    flex: 1 1 0px;
-    padding: 0 100px;
-    justify-content: center;
-    gap: 50px;
-    
- }
-
- 
-.header-left, .header-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    gap: 10px;
+.welcome {
+    background-color: var(--dark-background-clr);
     
 }
 
-button {
-    width: 100px;
-    height: 30px;
+.welcome h2 {
+    color: var(--strong-white-text-clr);
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    height: 300px;
-}
-
-
-.placeholder {
-    width: 600px;
-    height: 300px;
-    background-color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #e5e7eb;
-}
-
-#main {
-    
-    
-}
-
-.section-information {
-    display: flex;
-    
-    
-}
-
-.section-quote {
-    padding: 50px;
-    background-color: #e5e7eb;
-    
-}
-
-.cta-container {
-    
-}
-
-.section-cta {
-    display: flex;
-    padding: 50px;
-    
-}
-
-#footer {
-    display: flex;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    
+.welcome p {
+    color: var(--weak-white-text-clr);
 }

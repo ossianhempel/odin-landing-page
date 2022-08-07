@@ -55,11 +55,12 @@ ul {
 }
 
 
+
 /* SETTINGS */
 
 /* DEV STYLES */
 
-header, footer, main {
+/* header, footer, main {
     border: 4px solid red;
 }
 
@@ -70,7 +71,7 @@ section {
 .inner-container {
     border: 4px solid orange;
     padding: 10px;
-}
+} */
 
 /* body * {
     border: 1px solid blue;
@@ -114,13 +115,9 @@ header .inner-container {
     font-size: var(--fs-main-text);
 }
 
-.quote {
-    font-style: italic;
-    font-size: var(--fs-quote-text);
-}
-
 
 /* ------------- COMPONENTS ----------- */
+
 button {
     display: inline-block;
     color: var(--weak-white-text-clr);
@@ -139,9 +136,17 @@ button {
 }
 
 /* --------------- MODULES --------------- */
+
 header .inner-container {
     display: flex;
+    width: 100vw;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+header .header-links {
+    gap: 20px;
 }
 
 hero {
@@ -180,6 +185,11 @@ hero picture {
       }
 }
 
+.products {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
 product-display {
     display: flex;
     flex-direction: column;
@@ -191,7 +201,6 @@ product-display h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: orange;
     /* margin-bottom: 30px; */
 }
 
@@ -201,7 +210,8 @@ product-display h2 {
     justify-content: center;
     width: 100%;
     gap: 40px;
-    border: 4px solid red;
+    /* border: 4px solid red; */
+    flex-wrap: wrap;
     /* padding: 0 50px; */
 }
 
@@ -213,10 +223,60 @@ product {
 
 .product-text {
     width: 150px;
-    border: 2px solid blue;
 }
 
+.quotes {
+    padding: 80px;
+    
+}
+
+quote {
+    display: block;
+    margin: auto auto;
+    width: 90%;
+}
+
+quote p {
+    text-align: end;
+}
+
+.inner-container.cta {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+}
+
+cta {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    width: 70vw;
+    align-items: center;
+    border-radius: 5px;
+}
+
+footer .inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
 /* ------------- STYLING -------------------- */
+
+header .inner-container {
+    background-color: var(--dark-background-clr);
+}
+
+header .inner-container h1 {
+    color: var(--strong-white-text-clr);
+}
+
+header .inner-container .header-links a {
+    color: var(--weak-white-text-clr);
+    
+}
 
 .welcome {
     background-color: var(--dark-background-clr);
@@ -232,6 +292,7 @@ product {
 
 .products {
     background-color: var(--white-clr);
+    border: 0.5px solid #e4e7ec;
 }
 
 .products h2 {
@@ -242,4 +303,44 @@ product {
 
 .product-text {
     color: var(--quote-text-clr);
+}
+
+.quotes {
+    background-color: var(--quote-background-clr);
+}
+
+quote em {
+    font-size: var(--fs-quote-text);
+    font-style: italic;
+}
+
+quote p {
+    font-weight: bolder;
+    font-size: var(--fs-secondary-text);
+}
+
+cta {
+    background-color: var(--light-blue-clr);
+}
+
+.cta {
+    border: 0.5px solid #e4e7ec;
+}
+
+.button-lower {
+    border: 1.5px solid var(--weak-white-text-clr);
+}
+
+cta h2 {
+    font-size: var(--fs-logo-text);
+    color: var(--strong-white-text-clr);
+}
+
+cta p {
+    color: var(--weak-white-text-clr);
+}
+
+footer .inner-container {
+    background-color: var(--dark-background-clr);
+    color: var(--weak-white-text-clr);
 }
